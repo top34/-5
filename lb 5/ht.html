@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторна робота 5: Вступ до JavaScript</title>
+</head>
+<body>
+  <h1>Лабораторна робота 5: Вступ до JavaScript</h1>
+  
+  <script>
+    // Завдання 1: Привітання користувача
+    console.log("--- Завдання 1 ---");
+    let userName = prompt("Введіть своє ім'я:");
+    let greeting = "Привіт, " + userName + "! Радий тебе бачити!";
+    alert(greeting);
+    console.log(greeting);
+
+    // Завдання 2: Проста арифметика
+    console.log("--- Завдання 2 ---");
+    let variant = parseInt(prompt("Введіть номер Вашого варіанту (щоб визначити парний чи непарний):"));
+    let num1 = parseFloat(prompt("Введіть перше число:"));
+    let num2 = parseFloat(prompt("Введіть друге число:"));
+    let resultMsg = "";
+
+    if (variant % 2 === 0) {
+        // Парний варіант: сума та різниця
+        let sum = num1 + num2;
+        let diff = num1 - num2;
+        resultMsg = "Варіант парний.\nСума: " + sum + "\nРізниця: " + diff;
+    } else {
+        // Непарний варіант: добуток та частка
+        let product = num1 * num2;
+        let quotient = num2 !== 0 ? (num1 / num2) : "Ділення на нуль!";
+        resultMsg = "Варіант непарний.\nДобуток: " + product + "\nЧастка: " + quotient;
+    }
+    alert(resultMsg);
+    console.log(resultMsg);
+
+    // Завдання 3: Вік користувача
+    console.log("--- Завдання 3 ---");
+    let birthYear = parseInt(prompt("Введіть рік Вашого народження:"));
+    let currentYear = 2026; // Поточний рік
+    let userAge = currentYear - birthYear;
+    
+    const myAge = 20; // Вкажіть тут свій вік
+    
+    let ageDiff = Math.abs(userAge - myAge);
+    let ageMessage = "Поточний вік користувача: " + userAge + " років.\n";
+
+    if (userAge > myAge) {
+        ageMessage += "Користувач старший на " + ageDiff + " років.";
+    } else if (userAge < myAge) {
+        ageMessage += "Користувач молодший на " + ageDiff + " років.";
+    } else {
+        ageMessage += "Ми однолітки!";
+    }
+    
+    alert(ageMessage);
+    console.log(ageMessage);
+  </script>
+</body>
+</html>
